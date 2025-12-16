@@ -37,7 +37,7 @@ async function deploy() {
       console.log('正在清理远程目录...')
       const files = await sftp.list(config.remotePath)
       for (const file of files) {
-        const remoteFile = `${config.remotePath}${file.name}`.replace(/\/+/g, '/')
+        const remoteFile = `${config.remotePath}/${file.name}`.replace(/\/+/g, '/')
         if (file.type === 'd') {
           await sftp.rmdir(remoteFile, true)
         }
