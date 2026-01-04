@@ -23,11 +23,11 @@ export interface MenuItem {
 export const menuList: MenuItem[] = [
   {
     name: 'Features',
-    selector: 'value-proposition',
+    selector: 'why-section',
   },
   {
     name: 'Pricing',
-    selector: 'core-capabilities',
+    selector: 'services-section',
   },
   {
     name: 'Careers',
@@ -35,6 +35,6 @@ export const menuList: MenuItem[] = [
   },
   {
     name: 'Help',
-    selector: 'global-presence',
+    selector: 'question-section',
   },
 ]

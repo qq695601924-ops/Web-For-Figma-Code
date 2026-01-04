@@ -73,7 +73,7 @@ const changeActiveIndex = (index: number) => {
 </script>
 
 <template>
-  <div class="question-section py-150">
+  <div id="question-section" class="question-section py-150">
     <div class="area h-600 flex justify-between">
       <img
         src="@/assets/images/home/post-question.webp"
