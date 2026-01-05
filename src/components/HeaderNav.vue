@@ -58,7 +58,7 @@ const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
         </div>
         <div class="flex item-center gap-30 flex-1">
           <div
-            v-for="item in menuList.slice(0, 4)"
+            v-for="item in menuList"
             :key="item.name"
             class="h-100% md:flex items-center relative text-14 cursor-pointer hover:text-black text-[var(--primary-color)] transition-all duration-200"
             @click="handleNavigation(item)"

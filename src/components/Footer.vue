@@ -119,7 +119,7 @@ function gotoBlankPage(url: string) {
               </li>
             </ul>
           </div>
-          <div class="mt-0 mt-40">
+          <div class="md:mt-0 mt-40">
             <div class="md:text-16 text-50 font-semibold md:mb-22 mb-40 text-white">
               Company
             </div>
