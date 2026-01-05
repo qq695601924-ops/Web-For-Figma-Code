@@ -4,6 +4,7 @@ import {
   presetIcons,
   presetMini,
 } from 'unocss'
+import transformerDirectives from '@unocss/transformer-directives'
 
 import presetWind3 from '@unocss/preset-wind3'
 // https://unocss.dev/presets/rem-to-px
@@ -18,6 +19,9 @@ export default defineConfig({
       baseFontSize: 4,
     }),
     presetMini(),
+  ],
+  transformers: [
+    transformerDirectives(),
   ],
   shortcuts: {
     // 只在移动端显示

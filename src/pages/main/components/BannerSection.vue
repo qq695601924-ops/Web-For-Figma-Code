@@ -28,23 +28,25 @@ function scrollToElement(selector: string) {
 <template>
   <div
     id="banner-section"
-    class="banner-section relative overflow-hidden pt-[var(--nav-bar-height)] h-949"
+    class="banner-section relative overflow-hidden pt-[var(--nav-bar-height)] md:h-949 h-1000"
   >
-    <div class="area pt-90">
+    <div class="area md:pt-90 pt-100 md:px-0 px-50">
       <div class="text-88 font-semibold w-678 lh-100 mb-40">Your Gatway To Go Global</div>
-      <div class="text-20 lh-30 text-[rgba(33,21,81,0.5)] w-690 mb-40">
+      <div
+        class="md:text-20 text-35 lh-50 md:lh-30 text-[rgba(33,21,81,0.5)] w-690 mb-40"
+      >
         We empower businesses to transact globally with seamless onboarding and end-to-end
         payment integration. Our gateway combines global expertise with a strong local
         presence to ensure secure, efficient, and reliable transactions.
       </div>
       <div
-        class="hover-scale w-187 h-69 border-rd-8 bg-[#47D7AC] text-24 flex items-center justify-center font-semibold cursor-pointer"
+        class="hover-scale md:w-187 w-350 md:h-69 h-100 border-rd-8 bg-[#47D7AC] md:text-24 text-35 flex items-center justify-center font-semibold cursor-pointer"
         @click="handleNavigation('contact-section')"
       >
         Contact Us
       </div>
       <div
-        class="w-235 h-96 border-rd-17 bg-[rgba(255,255,255,0.8)] flex items-center justify-center gap-18 px-20 absolute right-430 top-450 z-2"
+        class="w-235 h-96 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-18 px-20 absolute right-430 top-450 z-2 md:flex hidden"
       >
         <img
           src="@/assets/images/home/icon-banner-safe.svg"
@@ -54,7 +56,7 @@ function scrollToElement(selector: string) {
         <div class="text-20 lh-24 text-#595959">Secure Payments</div>
       </div>
       <div
-        class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] flex items-center justify-center gap-10 px-20 absolute -right-40 top-350 z-2"
+        class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-10 px-20 absolute -right-40 top-350 z-2 md:flex hidden"
       >
         <img
           src="@/assets/images/home/icon-banner-good.svg"
@@ -64,7 +66,7 @@ function scrollToElement(selector: string) {
         <div class="text-20 lh-24 text-#595959">24/7 Expert Support</div>
       </div>
       <div
-        class="w-222 h-145 border-rd-17 bg-[rgba(255,255,255,0.8)] flex flex-col items-center justify-center gap-20 px-20 absolute right-320 top-650 z-2"
+        class="w-222 h-145 border-rd-17 bg-[rgba(255,255,255,0.8)] flex-col items-center justify-center gap-20 px-20 absolute right-320 top-650 z-2 md:flex hidden"
       >
         <img
           src="@/assets/images/home/icon-banner-time.svg"
@@ -76,12 +78,12 @@ function scrollToElement(selector: string) {
       <img
         src="@/assets/images/home/post-banner.webp"
         alt="banner-img"
-        class="w-auto absolute -right-110 -top-50 h-960"
+        class="w-auto absolute -md:right-110 -right-230 -md:top-50 top-50 md:h-960 h-1000"
       />
       <img
         src="@/assets/images/home/icon-banner-record.svg"
         alt="banner-img"
-        class="w-auto absolute right-370 top-100 h-130"
+        class="w-auto absolute right-370 top-100 h-130 md:block hidden"
       />
     </div>
   </div>
@@ -93,7 +95,7 @@ function scrollToElement(selector: string) {
 }
 @media (max-width: 768px) {
   .banner-section {
-    background-size: cover;
+    background-size: 200% auto;
   }
 }
 </style>

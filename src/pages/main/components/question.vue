@@ -74,14 +74,14 @@ const changeActiveIndex = (index: number) => {
 
 <template>
   <div id="question-section" class="question-section py-150">
-    <div class="area h-600 flex justify-between">
+    <div class="area md:h-600 h-auto flex justify-between md:px-0 px-60">
       <img
         src="@/assets/images/home/post-question.webp"
         alt="question"
-        class="w-auto h-593"
+        class="w-auto h-593 md:block hidden"
       />
-      <div class="w-632">
-        <div class="text-48 font-bold lh-55 mb-40">
+      <div class="md:w-632 w-full">
+        <div class="md:text-48 text-88 font-bold md:lh-55 lh-100 md:mb-40 mb-70">
           Vexora's Account with Local Provider
         </div>
         <div
@@ -92,32 +92,32 @@ const changeActiveIndex = (index: number) => {
             borderBottom:
               index === questionList.length - 1 ? '1px solid #e5e5e5' : 'none',
           }"
-          class="h-80 overflow-hidden transition-all duration-200 cursor-pointer"
+          class="md:h-80 h-150 overflow-hidden transition-all duration-200 cursor-pointer"
           :class="{
-            '!h-215': item.open && index === 0,
-            '!h-155': item.open && index === 1,
-            '!h-285': item.open && index === 2,
-            '!h-205': item.open && index === 3,
+            '!md:h-215 h-600': item.open && index === 0,
+            '!md:h-155 h-370': item.open && index === 1,
+            '!md:h-285 h-750': item.open && index === 2,
+            '!md:h-205 h-480': item.open && index === 3,
           }"
           @click="changeActiveIndex(index)"
         >
-          <div class="text-24 font-bold lh-80 relative">
+          <div class="md:text-24 text-50 font-bold md:lh-80 lh-150 relative">
             {{ item.title }}
             <img
               v-if="item.open"
               src="@/assets/images/home/icon-question-close.svg"
               alt="arrow-down"
-              class="w-auto h-32 absolute right-0 top-1/2 -translate-y-1/2"
+              class="w-auto md:h-32 h-60 absolute right-0 top-1/2 -translate-y-1/2"
             />
             <img
               v-else
               src="@/assets/images/home/icon-question-open.svg"
               alt="arrow-down"
-              class="w-auto h-32 absolute right-0 top-1/2 -translate-y-1/2"
+              class="w-auto md:h-32 h-60 absolute right-0 top-1/2 -translate-y-1/2"
             />
           </div>
           <div
-            class="text-14 lh-23 text-[rgba(27,21,43,0.5)] pb-20"
+            class="md:text-14 text-44 md:lh-23 lh-55 text-[rgba(27,21,43,0.5)] pb-20"
             v-html="item.desc"
           ></div>
         </div>

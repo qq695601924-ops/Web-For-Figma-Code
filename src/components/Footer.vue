@@ -60,15 +60,17 @@ function gotoBlankPage(url: string) {
     <div
       class="footer-wrapper relative overflow-hidden text-white bg-#211551 text-lighter"
     >
-      <div class="area pt-50">
-        <div class="flex justify-between">
-          <div>
+      <div class="area md:pt-50 pt-100 md:px-0 px-50">
+        <div class="md:flex block justify-between">
+          <div class="md:mb-0 mb-70">
             <img
               src="@/assets/images/common/logo-white.svg"
               alt="logo"
-              class="w-auto h-32 mb-20 block"
+              class="w-auto md:h-32 h-80 mb-20 block"
             />
-            <div class="w-300 text-16 lh-24 text-[rgba(255,255,255,0.65)]">
+            <div
+              class="md:w-300 w-full md:text-16 text-40 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)]"
+            >
               We empower businesses to transact globally with seamless onboarding and
               end-to-end payment integration. Our gateway combines global expertise with a
               strong local presence to ensure secure, efficient, and reliable
@@ -76,8 +78,12 @@ function gotoBlankPage(url: string) {
             </div>
           </div>
           <div>
-            <div class="text-16 font-semibold mb-22 text-white">Platform</div>
-            <ul class="text-16 text-[rgba(255,255,255,0.65)]">
+            <div class="md:text-16 text-50 font-semibold md:mb-22 mb-40 text-white">
+              Platform
+            </div>
+            <ul
+              class="md:text-16 text-45 md:block flex gap-40 text-[rgba(255,255,255,0.65)]"
+            >
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
                 v-if="false"
@@ -85,7 +91,7 @@ function gotoBlankPage(url: string) {
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
-                  class="w-auto h-16"
+                  class="w-auto md:h-16 h-60"
                 />
                 API Documentation
               </li>
@@ -96,7 +102,7 @@ function gotoBlankPage(url: string) {
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
-                  class="w-auto h-16"
+                  class="w-auto md:h-16 h-60"
                 />
                 Privacy Policy
               </li>
@@ -107,15 +113,19 @@ function gotoBlankPage(url: string) {
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
-                  class="w-auto h-16"
+                  class="w-auto md:h-16 h-60"
                 />
                 Terms of Service
               </li>
             </ul>
           </div>
-          <div>
-            <div class="text-16 font-semibold mb-22 text-white">Company</div>
-            <ul class="text-16 text-[rgba(255,255,255,0.65)]">
+          <div class="mt-0 mt-40">
+            <div class="md:text-16 text-50 font-semibold md:mb-22 mb-40 text-white">
+              Company
+            </div>
+            <ul
+              class="md:text-16 text-45 md:block flex flex-wrap gap-20 text-[rgba(255,255,255,0.65)]"
+            >
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
                 @click="handleNavigation({ selector: 'banner-section' })"
@@ -123,7 +133,7 @@ function gotoBlankPage(url: string) {
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
-                  class="w-auto h-16"
+                  class="w-auto md:h-16 h-60"
                 />
                 Home
               </li>
@@ -134,7 +144,7 @@ function gotoBlankPage(url: string) {
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
-                  class="w-auto h-16"
+                  class="w-auto md:h-16 h-60"
                 />
                 Advantages
               </li>
@@ -145,7 +155,7 @@ function gotoBlankPage(url: string) {
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
-                  class="w-auto h-16"
+                  class="w-auto md:h-16 h-60"
                 />
                 Services
               </li>
@@ -156,7 +166,7 @@ function gotoBlankPage(url: string) {
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
-                  class="w-auto h-16"
+                  class="w-auto md:h-16 h-60"
                 />
                 Global Reach
               </li>
@@ -167,15 +177,19 @@ function gotoBlankPage(url: string) {
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
-                  class="w-auto h-16"
+                  class="w-auto md:h-16 h-60"
                 />
                 About
               </li>
             </ul>
           </div>
-          <div>
-            <div class="text-16 font-semibold mb-22 text-white">Contact</div>
-            <ul class="text-16 text-[rgba(255,255,255,0.65)]">
+          <div class="md:mt-0 mt-40">
+            <div class="md:text-16 text-50 font-semibold md:mb-22 mb-40 text-white">
+              Contact
+            </div>
+            <ul
+              class="md:text-16 text-45 md:block flex flex-wrap gap-20 text-[rgba(255,255,255,0.65)]"
+            >
               <li class="flex items-center gap-4 mb-20">{{ EMAIL }}</li>
             </ul>
           </div>
@@ -186,7 +200,7 @@ function gotoBlankPage(url: string) {
           class="w-full h-auto block py-50"
         />
         <div
-          class="text-16 text-center lh-60 flex items-center justify-center"
+          class="md:text-16 text-40 text-center md:lh-60 lh-120 flex items-center justify-center"
           style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
         >
           {{ COPYRIGHT }}

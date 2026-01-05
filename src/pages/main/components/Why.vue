@@ -1,16 +1,22 @@
 <template>
-  <div id="why-section" class="why-section py-100" style="scroll-margin-top: 100px">
+  <div
+    id="why-section"
+    class="why-section md:py-100 py-150"
+    style="scroll-margin-top: 100px"
+  >
     <div class="area flex flex-col items-center justify-center gap-50">
-      <div class="text-48 font-bold text-center">Why Work With Vexora?</div>
-      <div>
-        <div class="flex items-center justify-between mb-50">
+      <div class="md:text-48 text-88 font-bold text-center">Why Work With Vexora?</div>
+      <div class="md:px-0 px-50 mx-auto">
+        <div class="md:flex block items-center justify-between mb-50">
           <div
-            class="w-580 h-408 bg-#EFFCF9 border-rd-16 px-20 py-20 flex flex-col justify-between"
+            class="md:w-580 w-full md:h-408 h-auto bg-#EFFCF9 border-rd-16 md:px-20 px-50 md:py-20 py-50 flex flex-col justify-between md:mb-0 mb-50"
             style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
           >
-            <div class="text-24 font-semibold">Access to Quality Merchants</div>
+            <div class="md:text-24 text-55 font-semibold">
+              Access to Quality Merchants
+            </div>
             <ul
-              class="text-14 text-[rgba(27,21,43,0.6)] lh-21 list-disc list-outside pl-15"
+              class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 list-disc list-outside pl-15 md:py-0 py-30"
             >
               <li>
                 We provide access to top merchants within the financial services sector.
@@ -30,12 +36,12 @@
             />
           </div>
           <div
-            class="w-580 h-408 bg-#EFFCF9 border-rd-16 px-20 py-20 flex flex-col justify-between"
+            class="md:w-580 w-full md:h-408 h-auto bg-#EFFCF9 border-rd-16 md:px-20 px-50 md:py-20 py-50 flex flex-col justify-between md:mb-0 mb-50"
             style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
           >
-            <div class="text-24 font-semibold">Risk Mitigation</div>
+            <div class="md:text-24 text-55 font-semibold">Risk Mitigation</div>
             <ul
-              class="text-14 text-[rgba(27,21,43,0.6)] lh-21 list-disc list-outside pl-15"
+              class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 list-disc list-outside pl-15 md:py-0 py-30"
             >
               <li>
                 Partnering with merchants through an aggregator like Vexora reduces direct
@@ -55,13 +61,13 @@
           </div>
         </div>
         <div
-          class="w-1200 h-204 bg-#EFFCF9 border-rd-16 px-20 py-20 flex justify-between items-center"
+          class="md:w-1200 w-full md:h-204 h-auto bg-#EFFCF9 border-rd-16 md:px-20 px-50 md:py-20 py-50 md:flex block justify-between items-center"
           style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
         >
-          <div class="w-670 flex flex-col justify-between">
-            <div class="text-24 font-semibold mb-15">Growth & Expansion</div>
+          <div class="md:w-670 w-full flex flex-col justify-between">
+            <div class="md:text-24 text-55 font-semibold mb-15">Growth & Expansion</div>
             <ul
-              class="text-14 text-[rgba(27,21,43,0.6)] lh-21 list-disc list-outside pl-15"
+              class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 list-disc list-outside pl-15 md:py-0 py-30"
             >
               <li>
                 We continuously onboard new merchants and expand our solution offerings
@@ -76,7 +82,7 @@
           <img
             src="@/assets/images/home/post-why-3.svg"
             alt="why-3"
-            class="w-auto h-150"
+            class="md:w-auto w-full md:h-150 h-auto"
           />
         </div>
       </div>
