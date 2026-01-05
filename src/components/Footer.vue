@@ -49,6 +49,10 @@ function scrollToElement(selector: string) {
     block: "start",
   });
 }
+
+function gotoBlankPage(url: string) {
+  window.open(url, "_blank");
+}
 </script>
 
 <template>
@@ -85,7 +89,10 @@ function scrollToElement(selector: string) {
                 />
                 API Documentation
               </li>
-              <li class="flex items-center gap-4 mb-20 cursor-pointer hover:underline">
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="gotoBlankPage('/PrivacyPolicy.html')"
+              >
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
@@ -93,7 +100,10 @@ function scrollToElement(selector: string) {
                 />
                 Privacy Policy
               </li>
-              <li class="flex items-center gap-4 mb-20 cursor-pointer hover:underline">
+              <li
+                class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
+                @click="gotoBlankPage('/TermsOfService.html')"
+              >
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
