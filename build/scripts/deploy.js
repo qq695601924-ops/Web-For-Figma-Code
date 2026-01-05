@@ -10,11 +10,11 @@ const rootDir = join(__dirname, '../..')
 
 // SFTP配置
 const config = {
-  host: '47.236.196.237',
+  host: '47.236.97.195',
   port: 22,
   username: 'root',
   privateKey: readFileSync(join(rootDir, 'SG-OUT.pem')),
-  remotePath: '/home/future-harvest-web/dist',
+  remotePath: '/home/vexora-web/dist',
   localPath: join(rootDir, 'dist'),
 }
 
