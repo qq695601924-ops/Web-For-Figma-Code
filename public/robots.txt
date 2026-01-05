@@ -1,5 +1,5 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.future-harvest.com/#/
-Sitemap: https://future-harvest.com/#/
+Sitemap: https://www.vexora.com.com/#/
+Sitemap: https://vexora.com/#/
