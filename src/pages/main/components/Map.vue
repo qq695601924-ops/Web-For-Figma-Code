@@ -5,20 +5,87 @@
     style="scroll-margin-top: 160px"
   >
     <div class="area relative h-full">
-      <div class="card left-113 top-280" data-bottom-center>🇲🇽 Mexico</div>
-      <div class="card left-203 top-370" data-bottom-center>🇨🇴 Colombia</div>
-      <div class="card left-315 top-440" data-bottom-center>🇧🇷 Brazil</div>
-      <div class="card left-515 top-430" data-top-center>🇳🇬 Nigeria</div>
-      <div class="card left-648 top-483" data-top-center>🇰🇪 Kenya</div>
-      <div class="card left-808 top-485" data-top-right>🇮🇩 Indonesia</div>
-      <div class="card right-10 top-420" data-top-left>🇵🇭 Philippines</div>
+      <div class="card left-113 top-280" data-bottom-center>
+        <div class="flex items-center">
+          <img src="@/assets/images/home/mexico.webp" alt="mx" class="w-auto h-25 mr-4" />
+          Mexico
+        </div>
+      </div>
+      <div class="card left-203 top-370" data-bottom-center>
+        <div class="flex items-center">
+          <img
+            src="@/assets/images/home/colombia.webp"
+            alt="co"
+            class="w-auto h-25 mr-4"
+          />
+          Colombia
+        </div>
+      </div>
+      <div class="card left-315 top-440" data-bottom-center>
+        <div class="flex items-center">
+          <img src="@/assets/images/home/brazil.webp" alt="br" class="w-auto h-25 mr-4" />
+          Brazil
+        </div>
+      </div>
+      <div class="card left-515 top-430" data-top-center>
+        <div class="flex items-center">
+          <img
+            src="@/assets/images/home/nigeria.webp"
+            alt="ng"
+            class="w-auto h-25 mr-4"
+          />
+          Nigeria
+        </div>
+      </div>
+      <div class="card left-648 top-483" data-top-center>
+        <div class="flex items-center">
+          <img src="@/assets/images/home/kenya.webp" alt="ke" class="w-auto h-25 mr-4" />
+          Kenya
+        </div>
+      </div>
+      <div class="card left-808 top-485" data-top-right>
+        <div class="flex items-center">
+          <img
+            src="@/assets/images/home/indonesia.webp"
+            alt="id"
+            class="w-auto h-25 mr-4"
+          />
+          Indonesia
+        </div>
+      </div>
+      <div class="card right-10 top-420" data-top-left>
+        <div class="flex items-center">
+          <img
+            src="@/assets/images/home/philippines.webp"
+            alt="ph"
+            class="w-auto h-25 mr-4"
+          />
+          Philippines
+        </div>
+      </div>
       <div class="card card-aus left-1035 bottom-245" data-bottom-left>
-        <span>🇦🇺 Australia</span>
+        <div class="flex items-center">
+          <img
+            src="@/assets/images/home/australia.webp"
+            alt="au"
+            class="w-auto h-25 mr-4"
+          />
+          Australia
+        </div>
         <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
           Trusted Local Acquiring in a High-Compliance Market
         </div>
       </div>
-      <div class="card right-370 top-250" data-bottom-right>🇵🇰 Pakistan</div>
+      <div class="card right-370 top-250" data-bottom-right>
+        <div class="flex items-center">
+          <img
+            src="@/assets/images/home/pakistan.webp"
+            alt="pk"
+            class="w-auto h-25 mr-4"
+          />
+          Pakistan
+        </div>
+      </div>
       <div class="card card-gcc right-415 top-350" data-top-right>
         <div class="flex items-center">
           <img src="@/assets/images/home/gcc.svg" alt="GCC" class="w-auto h-25 mr-4" />
@@ -28,21 +95,39 @@
           Enable GCC Card Payments with Confidence
         </div>
       </div>
-      <div class="card right-142 top-270" data-bottom-left>🇧🇩 Bangladesh</div>
+      <div class="card right-142 top-270" data-bottom-left>
+        <div class="flex items-center">
+          <img
+            src="@/assets/images/home/bangladesh.webp"
+            alt="bd"
+            class="w-auto h-25 mr-4"
+          />
+          Bangladesh
+        </div>
+      </div>
       <div class="card card-ind left-832 top-370" data-top-left>
-        <span>🇮🇳 India</span>
+        <div class="flex items-center">
+          <img src="@/assets/images/home/india.webp" alt="in" class="w-auto h-25 mr-4" />
+          India
+        </div>
         <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
           UPI, Cards, and Scale—Handled Locally
         </div>
       </div>
       <div class="card card-korea right-162 bottom-535" data-bottom-right>
-        <span>🇰🇷 Korea</span>
+        <div class="flex items-center">
+          <img src="@/assets/images/home/korea.webp" alt="kr" class="w-auto h-25 mr-4" />
+          Korea
+        </div>
         <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
           Advanced Card & Local Payments for a Tech-Driven Market
         </div>
       </div>
       <div class="card card-jp left-1032 bottom-515" data-bottom-left>
-        <span>🇯🇵 Japan</span>
+        <div class="flex items-center">
+          <img src="@/assets/images/home/japan.webp" alt="jp" class="w-auto h-25 mr-4" />
+          Japan
+        </div>
         <div class="text-16 text-[rgba(27,21,43,0.4)] lh-24 font-400 desc">
           Precision Payments for a Complex Ecosystem
         </div>
