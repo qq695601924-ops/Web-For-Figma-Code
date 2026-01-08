@@ -1,14 +1,14 @@
 <template>
   <div
     id="services-section"
-    class="services-section md:h-818 h-auto bg-[rgba(147,232,211,0.15)] md:py-0 py-150"
+    class="services-section md:h-700 h-auto bg-[rgba(147,232,211,0.15)] md:py-0 py-150"
     style="scroll-margin-top: 100px"
   >
     <div
       class="area flex flex-col items-center justify-center md:gap-40 gap-70 h-full md:px-0 px-50"
     >
       <div class="md:text-48 text-88 font-bold text-center md:w-645 w-100%">
-        Powering Global Payments, End to End
+        Powering Global Payments
       </div>
       <div class="grid md:grid-cols-2 grid-cols-1 gap-20 w-full">
         <div

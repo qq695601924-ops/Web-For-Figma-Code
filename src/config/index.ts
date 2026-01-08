@@ -6,7 +6,7 @@
 export const APP_NAME = import.meta.env.VITE_APP_NAME || 'Vexora'
 
 /** 邮箱 */
-export const EMAIL = 'support@vexora.com'
+export const EMAIL = ['sales@vexora.com', 'support@vexora.com']
 
 /** 地址 */
 export const ADDRESS = '---'

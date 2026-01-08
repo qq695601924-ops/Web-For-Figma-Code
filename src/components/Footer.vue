@@ -190,7 +190,13 @@ function gotoBlankPage(url: string) {
             <ul
               class="md:text-16 text-45 md:block flex flex-wrap gap-20 text-[rgba(255,255,255,0.65)]"
             >
-              <li class="flex items-center gap-4 mb-20">{{ EMAIL }}</li>
+              <li
+                class="flex items-center gap-4 mb-20"
+                v-for="email in EMAIL"
+                :key="email"
+              >
+                {{ email }}
+              </li>
             </ul>
           </div>
         </div>

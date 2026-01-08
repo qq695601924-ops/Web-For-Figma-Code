@@ -11,10 +11,10 @@ const step = [
     title: "About",
     image: postAbout1,
     desc:
-      "We are an international payment service provider (PSP) working with local partners worldwide to deliver localized payment solutions to global clients. We specialize in financial services merchants and focus on Alternative Payment Methods (APMs), including online banking, ATM cards, e-wallets, QR payments, and OTC transactions, with global card acquiring as a key strategic focus.",
+      "We are an international payment service provider (PSP) working with local partners worldwide to deliver localized payment solutions to global clients. We specialize in international merchants and focus on Alternative Payment Methods (APMs), including online banking, ATM cards, e-wallets, QR payments, and OTC transactions, with global card acquiring as a key strategic focus.",
   },
   {
-    title: "Purpose",
+    title: "Purpuse",
     image: postAbout2,
     desc:
       "To simplify global payments and remove barriers in complex and emerging markets, enabling businesses to accept payments securely and efficiently anywhere in the world.",
@@ -53,10 +53,6 @@ function changeIndex(index: number) {
           v-for="(item, index) in step"
           :key="item.title"
           class="md:w-540 w-800 md:h-558 h-900 rounded-12 relative"
-          :style="{
-            'box-shadow':
-              index === currentIndex ? '0 0 9px 6px rgba(37, 45, 61, 0.06)' : 'none',
-          }"
         >
           <div class="w-full md:h-266 md:h-300 h-400 relative">
             <img :src="item.image" alt="about-1" class="w-full h-full object-cover" />
@@ -71,7 +67,7 @@ function changeIndex(index: number) {
             </div>
           </div>
           <div
-            class="md:flex hidden w-88 h-88 bg-#FFFFFF rounded-full absolute left-25 top-210 items-center justify-center transition-all duration-200 opacity-0 z-2"
+            class="md:flex hidden w-88 h-88 bg-#FFFFFF rounded-full absolute left-25 top-240 items-center justify-center transition-all duration-200 opacity-0 z-2"
             style="box-shadow: 0px 50px 60px -10px rgba(0, 0, 0, 0.08)"
             :class="{ '!opacity-100': currentIndex === index }"
           >
