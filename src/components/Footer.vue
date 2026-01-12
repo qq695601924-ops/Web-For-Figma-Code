@@ -161,15 +161,14 @@ function gotoBlankPage(url: string) {
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
-                v-if="false"
-                @click="handleNavigation({ selector: 'map-section' })"
+                @click="handleNavigation({ selector: 'question-section' })"
               >
                 <img
                   src="@/assets/images/common/icon-arrow-right.svg"
                   alt="arrow-right"
                   class="w-auto md:h-16 h-60"
                 />
-                Global Reach
+                Security
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"

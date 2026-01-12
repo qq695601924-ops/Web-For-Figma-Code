@@ -76,7 +76,7 @@ function changeIndex(direction: number) {
             slidesPerView: 3,
           },
         }"
-        class="about-swiper md:h-900 h-auto"
+        class="about-swiper h-auto"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
       >
