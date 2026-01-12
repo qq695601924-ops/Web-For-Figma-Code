@@ -33,10 +33,10 @@ export const menuList: MenuItem[] = [
     name: 'Services',
     selector: 'services-section',
   },
-  // {
-  //   name: 'Global Reach',
-  //   selector: 'map-section',
-  // },
+  {
+    name: 'Security',
+    selector: 'question-section',
+  },
   {
     name: 'About',
     selector: 'about-section',
