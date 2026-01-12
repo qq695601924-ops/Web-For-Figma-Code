@@ -80,7 +80,7 @@ const changeActiveIndex = (index: number) => {
             class="md:text-24 text-50 font-bold md:lh-80 lh-150 relative"
             :class="{ 'text-[var(--primary-color)]': item.open }"
           >
-            {{ item.title.value }}
+            {{ item.title }}
             <img
               v-if="!item.open"
               src="@/assets/images/home/icon-question-close.svg"
@@ -98,7 +98,7 @@ const changeActiveIndex = (index: number) => {
           </div>
           <div
             class="md:text-14 text-44 md:lh-23 lh-55 text-[rgba(27,21,43,0.5)] pb-20"
-            v-html="item.desc.value"
+            v-html="item.desc"
           ></div>
         </div>
       </div>
