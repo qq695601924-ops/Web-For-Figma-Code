@@ -91,7 +91,7 @@ function changeIndex(direction: number) {
             <img :src="item.image" alt="about-1" class="w-full h-full object-cover" />
           </div>
           <div
-            class="md:flex hidden w-88 h-88 bg-#FFFFFF rounded-full absolute left-15 top-260 items-center justify-center transition-all duration-200 z-2"
+            class="md:flex hidden w-88 h-88 bg-#FFFFFF rounded-full absolute left-15 top-210 items-center justify-center transition-all duration-200 z-2"
             style="box-shadow: 0px 50px 60px -10px rgba(0, 0, 0, 0.08)"
           >
             <img
