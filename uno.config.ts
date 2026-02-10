@@ -3,10 +3,9 @@ import {
   presetAttributify,
   presetIcons,
   presetMini,
+  presetWind3,
 } from 'unocss'
 import transformerDirectives from '@unocss/transformer-directives'
-
-import presetWind3 from '@unocss/preset-wind3'
 // https://unocss.dev/presets/rem-to-px
 import presetRemToPx from '@unocss/preset-rem-to-px'
 
