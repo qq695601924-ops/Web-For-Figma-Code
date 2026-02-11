@@ -24,6 +24,7 @@ export default antfu(
   {
     ignores: [
       '.github/**',
+      '.cursor/**',
       'scripts/**',
     ],
   },
