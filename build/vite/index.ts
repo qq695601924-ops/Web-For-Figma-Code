@@ -5,8 +5,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueRouter from 'unplugin-vue-router/vite'
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-import path from 'node:path'
 
 export function createVitePlugins() {
   return [
@@ -18,11 +16,6 @@ export function createVitePlugins() {
     }),
 
     vue(),
-
-    // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
-    VueI18nPlugin({
-      include: [path.resolve(__dirname, '../../src/i18n/locales/**')],
-    }),
 
     // https://github.com/antfu/unplugin-vue-components
     Components({

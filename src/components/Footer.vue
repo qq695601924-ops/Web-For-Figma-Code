@@ -2,11 +2,9 @@
 import { COPYRIGHT, EMAIL } from "@/config/index";
 import { useRouter } from "vue-router";
 import { onMounted, ref } from "vue";
-import { useI18n } from "vue-i18n";
 
 const router = useRouter();
 const isVisible = ref(false);
-const { t } = useI18n();
 
 const theme = ref("dark");
 
@@ -74,12 +72,12 @@ function gotoBlankPage(url: string) {
             <div
               class="md:w-300 w-full md:text-16 text-40 md:lh-24 lh-50 text-[rgba(255,255,255,0.65)]"
             >
-              {{ t('footer.description') }}
+              We empower businesses to transact globally with seamless onboarding and end-to-end payment integration. Our gateway combines global expertise with a strong local presence to ensure secure, efficient, and reliable transactions.
             </div>
           </div>
           <div>
             <div class="md:text-16 text-50 font-semibold md:mb-22 mb-40 text-white">
-              {{ t('common.platform') }}
+              Platform
             </div>
             <ul
               class="md:text-16 text-45 md:block flex gap-40 text-[rgba(255,255,255,0.65)]"
@@ -104,7 +102,7 @@ function gotoBlankPage(url: string) {
                   alt="arrow-right"
                   class="w-auto md:h-16 h-60"
                 />
-                {{ t('common.privacyPolicy') }}
+                Privacy Policy
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
@@ -115,13 +113,13 @@ function gotoBlankPage(url: string) {
                   alt="arrow-right"
                   class="w-auto md:h-16 h-60"
                 />
-                {{ t('common.termsOfService') }}
+                Terms of Service
               </li>
             </ul>
           </div>
           <div class="md:mt-0 mt-40">
             <div class="md:text-16 text-50 font-semibold md:mb-22 mb-40 text-white">
-              {{ t('common.company') }}
+              Company
             </div>
             <ul
               class="md:text-16 text-45 md:block flex flex-wrap gap-20 text-[rgba(255,255,255,0.65)]"
@@ -135,7 +133,7 @@ function gotoBlankPage(url: string) {
                   alt="arrow-right"
                   class="w-auto md:h-16 h-60"
                 />
-                {{ t('common.home') }}
+                Home
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
@@ -146,7 +144,7 @@ function gotoBlankPage(url: string) {
                   alt="arrow-right"
                   class="w-auto md:h-16 h-60"
                 />
-                {{ t('common.advantages') }}
+                Advantages
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
@@ -157,7 +155,7 @@ function gotoBlankPage(url: string) {
                   alt="arrow-right"
                   class="w-auto md:h-16 h-60"
                 />
-                {{ t('common.services') }}
+                Services
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
@@ -168,7 +166,7 @@ function gotoBlankPage(url: string) {
                   alt="arrow-right"
                   class="w-auto md:h-16 h-60"
                 />
-                {{ t('common.security') }}
+                Security
               </li>
               <li
                 class="flex items-center gap-4 mb-20 cursor-pointer hover:underline"
@@ -179,13 +177,13 @@ function gotoBlankPage(url: string) {
                   alt="arrow-right"
                   class="w-auto md:h-16 h-60"
                 />
-                {{ t('common.about') }}
+                About
               </li>
             </ul>
           </div>
           <div class="md:mt-0 mt-40">
             <div class="md:text-16 text-50 font-semibold md:mb-22 mb-40 text-white">
-              {{ t('common.contact') }}
+              Contact
             </div>
             <ul
               class="md:text-16 text-45 md:block flex flex-wrap gap-20 text-[rgba(255,255,255,0.65)]"

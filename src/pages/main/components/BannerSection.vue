@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import { useLanguage } from "@/composables/language";
-import { useI18n } from "vue-i18n";
-
-const { language } = useLanguage();
-const { t } = useI18n();
-
 async function handleNavigation(selector: string) {
   // 如果目标路由与当前路由不同，先进行路由跳转
   if (selector) {
@@ -38,7 +32,7 @@ function scrollToElement(selector: string) {
   >
     <div class="area md:pt-90 pt-100 md:px-0 px-50">
       <div class="text-88 font-semibold w-678 lh-100 mb-40">
-        {{ t('banner.title') }}
+        Driving Smarter Transactions with Optivolve Digital.
       </div>
       <div
         v-if="false"
@@ -52,52 +46,47 @@ function scrollToElement(selector: string) {
         class="hover-scale md:w-187 w-350 md:h-69 h-100 border-rd-8 bg-[#47D7AC] md:text-24 text-35 flex items-center justify-center font-semibold cursor-pointer"
         @click="handleNavigation('footer-section')"
       >
-        {{ t('common.contactUs') }}
+        Contact Us
       </div>
       <div
-        class="w-235 h-96 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-18 px-20 absolute top-450 z-2 md:flex hidden"
-        :class="language === 'ur' ? 'left-430' : 'right-430'"
+        class="w-235 h-96 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-18 px-20 absolute top-450 z-2 md:flex hidden right-430"
       >
         <img
           src="@/assets/images/home/icon-banner-safe.svg"
           alt="banner-img"
           class="w-auto h-64"
         />
-        <div class="text-20 lh-24 text-#595959">{{ t('common.securePayments') }}</div>
+        <div class="text-20 lh-24 text-#595959">Secure Payments</div>
       </div>
       <div
-        class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-10 px-20 absolute top-455 z-2 md:flex hidden"
-        :class="language === 'ur' ? 'left-40' : '-right-40'"
+        class="w-294 h-82 border-rd-17 bg-[rgba(255,255,255,0.8)] items-center justify-center gap-10 px-20 absolute top-455 z-2 md:flex hidden -right-40"
       >
         <img
           src="@/assets/images/home/icon-banner-good.svg"
           alt="banner-img"
           class="w-auto h-44"
         />
-        <div class="text-20 lh-24 text-#595959">{{ t('common.expertSupport') }}</div>
+        <div class="text-20 lh-24 text-#595959">24/7 Expert Support</div>
       </div>
       <div
-        class="w-222 h-145 border-rd-17 bg-[rgba(255,255,255,0.8)] flex-col items-center justify-center gap-20 px-20 absolute top-650 z-2 md:flex hidden"
-        :class="language === 'ur' ? 'left-320' : 'right-320'"
+        class="w-222 h-145 border-rd-17 bg-[rgba(255,255,255,0.8)] flex-col items-center justify-center gap-20 px-20 absolute top-650 z-2 md:flex hidden right-320"
       >
         <img
           src="@/assets/images/home/icon-banner-time.svg"
           alt="banner-img"
           class="w-auto h-44"
         />
-        <div class="text-20 lh-24 text-#595959">{{ t('common.uptime') }}</div>
+        <div class="text-20 lh-24 text-#595959">99.99% Uptime</div>
       </div>
       <img
         src="@/assets/images/home/post-banner.webp"
         alt="banner-img"
-        class="w-auto absolute md:top-50 top-50 md:h-840 h-1000"
-        :class="language === 'ur' ? 'md:left-0 left-65' : 'md:right-15 right-70'"
+        class="w-auto absolute md:top-50 top-50 md:h-840 h-1000 md:right-15 right-70"
       />
       <img
         src="@/assets/images/home/icon-banner-record.svg"
         alt="banner-img"
-        class="w-auto absolute top-100 h-130 md:block hidden"
-        :class="language === 'ur' ? 'left-370' : 'right-370'"
+        class="w-auto absolute top-100 h-130 md:block hidden right-370"
       />
     </div>
   </div>

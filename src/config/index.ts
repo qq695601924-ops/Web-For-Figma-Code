@@ -22,23 +22,23 @@ export interface MenuItem {
 /** 菜单列表 */
 export const menuList: MenuItem[] = [
   {
-    name: 'common.home',
+    name: 'Home',
     selector: 'banner-section',
   },
   {
-    name: 'common.advantages',
+    name: 'Advantages',
     selector: 'why-section',
   },
   {
-    name: 'common.services',
+    name: 'Services',
     selector: 'services-section',
   },
   {
-    name: 'common.security',
+    name: 'Security',
     selector: 'question-section',
   },
   {
-    name: 'common.about',
+    name: 'About',
     selector: 'about-section',
   },
 ]

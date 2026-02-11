@@ -3,8 +3,6 @@ import { nextTick } from "vue";
 import { menuList } from "@/config/index";
 import type { MenuItem } from "@/config/index";
 import { useToggle } from "@vueuse/core";
-import { useLanguage } from "@/composables/language";
-import { useI18n } from "vue-i18n";
 
 async function handleNavigation(item: MenuItem) {
   const { selector } = item;
@@ -41,26 +39,6 @@ watch(y, (newY) => {
 });
 
 const [mobileMenuVisible, toggleMobileMenuVisible] = useToggle(false);
-const { language, setLanguage } = useLanguage();
-const [languageDropdownVisible, toggleLanguageDropdown] = useToggle(false);
-const languageDropdownRef = ref<HTMLElement | null>(null);
-const { t } = useI18n();
-
-const languageOptions = [
-  { value: "en", label: "English" },
-  { value: "ur", label: "اردو" },
-] as const;
-
-function handleLanguageSelect(lang: "en" | "ur") {
-  setLanguage(lang);
-  toggleLanguageDropdown(false);
-}
-
-onClickOutside(languageDropdownRef, () => {
-  if (languageDropdownVisible.value) {
-    toggleLanguageDropdown(false);
-  }
-});
 </script>
 
 <template>
@@ -85,48 +63,8 @@ onClickOutside(languageDropdownRef, () => {
             class="h-100% md:flex items-center relative text-14 cursor-pointer text-black hover:text-[var(--primary-color)] transition-all duration-200"
             @click="handleNavigation(item)"
           >
-            {{ t(item.name) }}
+            {{ item.name }}
           </div>
-        </div>
-        <div ref="languageDropdownRef" class="relative">
-          <div
-            class="flex items-center gap-8 cursor-pointer text-14 text-black hover:text-[var(--primary-color)] transition-all duration-200"
-            @click="toggleLanguageDropdown(!languageDropdownVisible)"
-          >
-            <span>{{
-              languageOptions.find((opt) => opt.value === language)?.label
-            }}</span>
-            <svg
-              class="w-12 h-12 transition-transform duration-200"
-              :class="{ 'rotate-180': languageDropdownVisible }"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </div>
-          <transition name="fade">
-            <div
-              v-if="languageDropdownVisible"
-              class="absolute rounded-10 overflow-hidden right-0 top-100% mt-8 bg-white border-1 border-#e5e5e5 border-rd-8 shadow-lg min-w-120 z-1000"
-            >
-              <div
-                v-for="option in languageOptions"
-                :key="option.value"
-                class="px-16 py-12 cursor-pointer text-14 hover:bg-#effcf9 transition-colors duration-200"
-                :class="{ 'bg-#effcf9': option.value === language }"
-                @click="handleLanguageSelect(option.value)"
-              >
-                {{ option.label }}
-              </div>
-            </div>
-          </transition>
         </div>
       </div>
     </div>
@@ -184,24 +122,7 @@ onClickOutside(languageDropdownRef, () => {
               style="border-bottom: 1px solid #e5e5e5"
               @click="handleNavigation(item)"
             >
-              {{ t(item.name) }}
-            </div>
-            <div class="mt-80 px-40 py-20 bg-#effcf9 rounded-10">
-              <div
-                v-for="(option, index) in languageOptions"
-                :key="option.value"
-                class="text-12 cursor-pointer lh-100 text-50 py-12"
-                :style="{
-                  borderBottom:
-                    index === languageOptions.length - 1 ? 'none' : '1px solid #0000001c',
-                }"
-                :class="{
-                  'text-[var(--primary-color)] font-semibold': option.value === language,
-                }"
-                @click="handleLanguageSelect(option.value)"
-              >
-                {{ option.label }}
-              </div>
+              {{ item.name }}
             </div>
           </div>
         </transition>

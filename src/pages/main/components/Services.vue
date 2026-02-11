@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 </script>
 
 <template>
@@ -14,7 +11,7 @@ const { t } = useI18n()
       class="area flex flex-col items-center justify-center md:gap-40 gap-70 h-full md:px-0 px-50"
     >
       <div class="md:text-48 text-88 font-bold text-center md:w-645 w-100%">
-        {{ t('services.title') }}
+        Our Services
       </div>
       <div class="grid md:grid-cols-2 grid-cols-1 gap-20 w-full">
         <div
@@ -27,12 +24,12 @@ const { t } = useI18n()
               alt="services-1"
               class="w-auto md:h-76 h-220"
             />
-            {{ t('services.localPayment.title') }}
+            Local Payment Collection & Disbursement
           </div>
           <div
             class="md:text-16 text-44 md:lh-24 lh-55 text-[rgba(27,21,43,0.5)] md:px-0 px-50 md:pb-0 pb-30"
           >
-            {{ t('services.localPayment.desc') }}
+            We deliver locally optimized payment services that enable businesses to collect and disburse funds in Pakistani Rupee (PKR) with confidence and efficiency. Our solutions are designed to support smooth, reliable transactions tailored to Pakistan's local payment environment.
           </div>
         </div>
         <div
@@ -45,12 +42,12 @@ const { t } = useI18n()
               alt="services-1"
               class="w-auto md:h-76 h-220"
             />
-            {{ t('services.payInOut.title') }}
+            Collection & Disbursement Enablement
           </div>
           <div
             class="md:text-16 text-44 md:lh-24 lh-55 text-[rgba(27,21,43,0.5)] md:px-0 px-50 md:pb-0 pb-30"
           >
-            {{ t('services.payInOut.desc') }}
+            Our platform supports secure Collection and Disbursement capabilities through integrations with local banks, digital wallets, and domestic payment rails. This allows enterprises to manage transactions seamlessly across Pakistan while ensuring speed, reliability, and operational consistency.
           </div>
         </div>
         <div
@@ -63,12 +60,12 @@ const { t } = useI18n()
               alt="services-1"
               class="w-auto md:h-76 h-220"
             />
-            {{ t('services.riskManagement.title') }}
+            Risk Management & Compliance
           </div>
           <div
             class="md:text-16 text-44 md:lh-24 lh-55 text-[rgba(27,21,43,0.5)] mb-0 -mt-20 md:px-0 px-50 md:pb-0 pb-30"
           >
-            {{ t('services.riskManagement.desc') }}
+            Protect your operations with built-in risk controls and compliance-focused processes. Optivolve Digital helps businesses reduce exposure to fraud, manage regulatory obligations, and maintain transaction integrity.
           </div>
         </div>
         <div
@@ -81,12 +78,12 @@ const { t } = useI18n()
               alt="services-1"
               class="w-auto md:h-76 h-220"
             />
-            {{ t('services.scalablePlatform.title') }}
+            Scalable Platform & Integration
           </div>
           <div
             class="md:text-16 text-44 md:lh-24 lh-55 text-[rgba(27,21,43,0.5)] mb-15 md:px-0 px-50 md:pb-0 pb-30"
           >
-            {{ t('services.scalablePlatform.desc') }}
+            Integrate quickly and scale effortlessly. Our platform is designed for flexible integration and long-term growth, enabling businesses to expand transaction volumes, add new markets, and evolve with changing demands.
           </div>
         </div>
       </div>

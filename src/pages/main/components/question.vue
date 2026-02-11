@@ -1,41 +1,35 @@
 <script setup lang="ts">
-import { useLanguage } from "@/composables/language";
-import { useI18n } from "vue-i18n";
-
-const { language } = useLanguage();
-const { t } = useI18n();
-
 const questionList = reactive([
   {
-    title: computed(() => t('question.securityFirst.title')),
-    desc: computed(() => `
+    title: "Security-First Architecture",
+    desc: `
     <ul class="list-disc list-outside pl-1em">
       <li>
-${t('question.securityFirst.desc')}</li>
+Optivolve Digital is designed with security as a foundational principle. Our platform applies structured controls and best-practice approaches to help safeguard transaction data throughout its lifecycle.</li>
     </ul>
-      `),
+      `,
     open: true,
   },
   {
-    title: computed(() => t('question.riskAwareness.title')),
-    desc: computed(() => `
+    title: "Risk Awareness and Prevention",
+    desc: `
     <ul class="list-disc list-outside pl-1em">
       <li>
-        ${t('question.riskAwareness.desc')}
+        We focus on reducing operational and transaction-related risks through continuous monitoring, system safeguards, and thoughtful design — helping businesses operate with greater stability and confidence.
       </li>
     </ul>
-    `),
+    `,
     open: false,
   },
   {
-    title: computed(() => t('question.trustTechnology.title')),
-    desc: computed(() => `
+    title: "Trust Through Responsible Technology",
+    desc: `
     <ul class="list-disc list-outside pl-1em">
       <li>
-        ${t('question.trustTechnology.desc')}
+        By prioritizing data protection and transparent processes, Optivolve Digital supports responsible transaction handling and helps businesses build long-term trust with their users.
       </li>
     </ul>
-    `),
+    `,
     open: false,
   },
 ]);
@@ -60,7 +54,7 @@ const changeActiveIndex = (index: number) => {
       />
       <div class="md:w-632 w-full">
         <div class="md:text-48 text-88 font-bold md:lh-55 lh-100 md:mb-40 mb-70">
-          {{ t('question.title') }}
+          Security Built Into Every Transaction
         </div>
         <div
           v-for="(item, index) in questionList"
@@ -85,15 +79,13 @@ const changeActiveIndex = (index: number) => {
               v-if="!item.open"
               src="@/assets/images/home/icon-question-close.svg"
               alt="arrow-down"
-              class="w-auto md:h-32 h-60 absolute top-1/2 -translate-y-1/2"
-              :class="language === 'ur' ? 'left-0' : 'right-0'"
+              class="w-auto md:h-32 h-60 absolute top-1/2 -translate-y-1/2 right-0"
             />
             <img
               v-else
               src="@/assets/images/home/icon-question-open.svg"
               alt="arrow-down"
-              class="w-auto md:h-32 h-60 absolute top-1/2 -translate-y-1/2"
-              :class="language === 'ur' ? 'left-0' : 'right-0'"
+              class="w-auto md:h-32 h-60 absolute top-1/2 -translate-y-1/2 right-0"
             />
           </div>
           <div

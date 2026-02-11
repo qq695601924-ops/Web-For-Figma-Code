@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
 </script>
 
 <template>
@@ -11,7 +8,7 @@ const { t } = useI18n()
     style="scroll-margin-top: 100px"
   >
     <div class="area flex flex-col items-center justify-center gap-50">
-      <div class="md:text-48 text-88 font-bold text-center">{{ t('why.title') }}</div>
+      <div class="md:text-48 text-88 font-bold text-center">Why Optivolve Digital?</div>
       <div class="md:px-0 px-50 mx-auto w-full">
         <div class="md:flex block items-center justify-between">
           <div
@@ -19,12 +16,12 @@ const { t } = useI18n()
             style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
           >
             <div class="md:text-24 text-55 font-semibold md:w-505 w-full">
-              {{ t('why.modernTransactions.title') }}
+              Built for Modern Transactions
             </div>
             <div
               class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 md:py-0 py-30"
             >
-              {{ t('why.modernTransactions.desc') }}
+              Optivolve Digital is designed to support today's fast-moving, borderless transaction needs. We provide businesses with a reliable and scalable infrastructure that simplifies how value moves across platforms, markets, and currencies — without unnecessary complexity.
             </div>
             <img
               src="@/assets/images/home/post-why-1.svg"
@@ -37,12 +34,12 @@ const { t } = useI18n()
             style="box-shadow: 0px 0px 17px 6px rgba(138, 192, 171, 0.15)"
           >
             <div class="md:text-24 text-55 font-semibold">
-              {{ t('why.localExpertise.title') }}
+              Local Expertise, Built for Pakistan
             </div>
             <div
               class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 md:py-0 py-30"
             >
-              {{ t('why.localExpertise.desc') }}
+              We combine deep understanding of Pakistan's local market with tailored payment solutions designed for regional regulations, consumer behavior, and risk environments. By focusing on local payment preferences and compliance requirements, Optivolve Digital enables businesses to operate confidently within Pakistan while delivering a smooth, reliable, and consistent transaction experience.
             </div>
             <img
               src="@/assets/images/home/post-why-2.svg"
@@ -57,12 +54,12 @@ const { t } = useI18n()
         >
           <div class="md:w-670 w-full flex flex-col justify-between">
             <div class="md:text-24 text-55 font-semibold mb-15">
-              {{ t('why.securityCore.title') }}
+              Security, Compliance, and Control at the Core
             </div>
             <div
               class="md:text-14 text-34 text-[rgba(27,21,43,0.6)] md:lh-21 lh-40 md:py-0 py-30"
             >
-              {{ t('why.securityCore.desc') }}
+              Trust is at the heart of everything we do. Optivolve Digital is built with strong security standards, compliance-first architecture, and transparent controls, helping businesses manage transactions efficiently while staying aligned with regulatory and risk requirements.
             </div>
           </div>
           <img

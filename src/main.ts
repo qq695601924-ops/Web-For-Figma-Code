@@ -7,12 +7,9 @@ import 'virtual:uno.css'
 import '@/styles/app.less'
 import '@/styles/var.less'
 import 'swiper/css'
-import { i18n } from '@/i18n'
-
 const app = createApp(App)
 
 app.use(router)
-app.use(i18n)
 app.use(ToastPlugin, {
   position: 'top-right',
 })
