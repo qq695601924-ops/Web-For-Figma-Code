@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeaderNav />
+    <!-- <NavBar /> -->
     <router-view v-slot="{ Component, route }">
       <transition name="scale" mode="out-in">
         <keep-alive>
@@ -8,7 +8,7 @@
         </keep-alive>
       </transition>
     </router-view>
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 

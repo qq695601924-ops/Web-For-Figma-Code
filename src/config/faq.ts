@@ -1,5 +1,3 @@
-
-
 export const HELP_FAQ_LIST: any[] = [
   {
     question: '¿Monto de préstamo?',

@@ -10,7 +10,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     Collapse: typeof import('./../components/Collapse.vue')['default']
     Footer: typeof import('./../components/Footer.vue')['default']
+    FooterBar: typeof import('./../components/layout/FooterBar.vue')['default']
     HeaderNav: typeof import('./../components/HeaderNav.vue')['default']
+    NavBar: typeof import('./../components/layout/NavBar.vue')['default']
+    RemovePageFooter: typeof import('./../components/RemovePageFooter.vue')['default']
+    RemovePageHeader: typeof import('./../components/RemovePageHeader.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
