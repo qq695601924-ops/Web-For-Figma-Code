@@ -123,7 +123,7 @@ description: >
    - **保持 top 值不变**：如果 `top` 值是相对同一父容器的，则保持不变
 
 4. **处理全宽背景**
-   - 全宽背景（navbar、footer 的背景色/背景图）保持 `w-full`
+   - navbar、footer 也需要安全区域
    - 仅内部内容用安全区域容器包裹
    - 例如：
      ```html
@@ -154,6 +154,11 @@ description: >
 > **去重**：每次 Figma 复制的代码可能都包含 navbar 和 footer。如果之前已经生成过 `NavBar.vue` 和 `FooterBar.vue`，则**跳过生成**，只从主代码中移除对应部分并替换为组件引用即可。仅在首次出现或结构明显不同时才输出组件文件。
 
 > **调整层级**：navbar 默认 fixed 到顶部，z-index 设为 199。
+
+> **重要 - 不要添加 padding-top**：navbar 已从主容器中提取并在 App.vue 中统一管理，主容器与 navbar 是分离的。**禁止**自动为主容器添加 `pt-`（padding-top）类，因为：
+> - navbar 是 fixed 定位，脱离文档流，不会遮挡主容器内容
+> - Figma 导出的原始布局中，navbar 和主内容区域通常是分离的
+> - 主容器的原始设计已经考虑了布局，不需要额外的 padding-top
 
 #### 识别规则（当没有明确 id 时）
 
@@ -189,6 +194,8 @@ description: >
 - 目的：允许内容撑开，避免移动端溢出。
 
 > **执行时机**：在提取 navbar/footer 之后执行，因为下一步需要基于这个 min-h 值进行修正。
+
+> **禁止添加 padding-top**：在此步骤中，**不要**为主容器添加任何 `pt-` 类。navbar 是 fixed 定位且已从主容器中分离，主容器不需要额外的 padding-top 来避免被遮挡。
 
 ---
 
