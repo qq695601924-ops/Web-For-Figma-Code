@@ -171,7 +171,7 @@ description: >
        - **重要**：top 值的调整是相对于 section 的起始位置，不是相对于根容器
 
 4. **处理全宽背景**
-   - navbar、footer 也需要安全区域
+   - NavBar、FooterBar 也需要安全区域!
    - 仅内部内容用安全区域容器包裹
    - 例如：
      ```html
