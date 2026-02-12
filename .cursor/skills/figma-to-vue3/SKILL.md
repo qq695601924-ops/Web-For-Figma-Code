@@ -149,15 +149,17 @@ description: >
 
 ### 步骤 4 · 重算父容器 min-h
 
-步骤 3 得到的 `min-h-xx` 值需要修正，因为 footer 已经从主容器中移除：
+步骤 3 得到的 `min-h-xx` 值需要修正，因为 navbar 和 footer 已经从主容器中移除：
 
-- **使用 viewport 动态计算**：不依赖 Figma 原始固定像素值，改用 viewport 单位
-- **计算公式**：`min-h-[calc(100vh-footer高度)]`
-- **navbar 处理**：navbar 已设置为 `fixed` 定位，不占用文档流空间，因此**不需要减去** navbar 高度
-- **footer 高度**：从步骤 2 中提取的 footer 元素的 `h-xx` class 中读取
-- 如果无法确定 footer 具体高度，在代码中用注释标注
+```
+新 min-h = 原始 h 值 - footer 高度
+```
 
-> **为什么需要修正**：footer 已提取为独立组件，主容器的高度应该减去 footer 的高度，避免页面高度计算错误。navbar 因为是 fixed 定位，不占用文档流，所以不影响主容器高度计算。
+- navbar 高度：从步骤 2 中提取的 navbar 元素的 `h-xx` class 中读取。
+- footer 高度：同理。
+- 如果无法确定具体高度，在代码中用注释标注 `/* TODO: 减去 footer 高度 */`。
+
+> **为什么需要修正**：navbar 和 footer 已提取为独立组件，主容器的高度应该减去它们的高度，避免页面高度计算错误。
 
 ---
 
