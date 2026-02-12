@@ -128,10 +128,13 @@ description: >
 
 - `NavBar.vue` → `@/components/layout/NavBar.vue`
 - `FooterBar.vue` → `@/components/layout/FooterBar.vue`
-- 主代码中 navbar/footer 的位置替换为 `<NavBar />` 和 `<FooterBar />`
+- **主代码中移除 navbar/footer**：从主页面代码中完全删除 navbar 和 footer 的 HTML 代码，**不要**替换为组件引用
 - **记录高度**：提取 navbar 和 footer 的高度值（从 `h-xx` class 中读取），用于后续步骤计算
 
-> **注意**：如果输出了独立的组件文件，需要在 App.vue 中默认引入 navbar 和 footer。
+> **重要**：如果输出了独立的组件文件，**必须在 App.vue 中引入并使用** NavBar 和 FooterBar 组件：
+> - 在 App.vue 的 `<template>` 中，在 `<router-view>` 之前添加 `<NavBar />`，在 `<router-view>` 之后添加 `<FooterBar />`
+> - 在 App.vue 的 `<script setup>` 中添加 `import NavBar from '@/components/layout/NavBar.vue'` 和 `import FooterBar from '@/components/layout/FooterBar.vue'`
+> - **不要在各个页面文件中单独引入** NavBar 和 FooterBar，它们应该在 App.vue 中统一管理，这样所有页面都能共享这些布局组件
 
 ---
 
@@ -166,16 +169,23 @@ description: >
 
 - **范围**：对**最终产出**的所有代码（主页面 + `NavBar.vue` + `FooterBar.vue`）一起扫描。
 - 找出所有 `http://` 或 `https://` 开头的图片 URL（img src、background-image 等）。
-- 输出一份下载清单，格式如下：
+- **图片重命名规则**：
+  - Figma 提供的图片 URL 可能包含特殊字符（如冒号 `:`、URL 编码的 `%3A` 等），这些字符在文件系统中可能不被支持
+  - **统一使用 `[页面名称或组件名]-[随机值].[扩展名]` 格式重命名**
+  - 主页面图片：`{页面名}-{随机8位字符}.{扩展名}`，例如：`home-a3f5b2c1.png`
+  - NavBar 组件图片：`navbar-{随机8位字符}.{扩展名}`，例如：`navbar-x9k2m4n7.png`
+  - FooterBar 组件图片：`footer-{随机8位字符}.{扩展名}`，例如：`footer-p8q1r3s6.png`
+  - 随机值使用 8 位十六进制字符（0-9a-f），确保唯一性
+  - 保留原始图片格式（扩展名），不做格式转换
+- **输出下载清单**，格式如下：
 
 | 远程 URL | 本地路径 |
 |---------|---------|
-| `https://example.com/bg.png` | `@/assets/images/页面名/bg.png` |
-| `https://example.com/logo.png` | `@/assets/images/layout/logo.png` |
+| `https://example.com/126%3A1961-Group.png` | `@/assets/images/页面名/home-a3f5b2c1.png` |
+| `https://example.com/logo.png` | `@/assets/images/layout/navbar-x9k2m4n7.png` |
 
 - 可按所属文件区分资源目录（如主页面用 `页面名`，navbar/footer 用 `layout`），避免混在一起。
 - 代码中的引用路径统一改为 `@/assets/images/...`。
-- 保留原始图片格式，不做格式转换。
 
 ---
 
@@ -183,15 +193,20 @@ description: >
 
 每次转换完成后交付：
 
-1. **页面文件**：`src/pages/{页面名}/index.vue`（清理后的主页面代码）
+1. **页面文件**：`src/pages/{页面名}/index.vue`（清理后的主页面代码，**不包含** navbar 和 footer）
 2. **NavBar.vue** 独立组件（仅首次或结构变化时输出）→ `@/components/layout/NavBar.vue`
 3. **FooterBar.vue** 独立组件（仅首次或结构变化时输出）→ `@/components/layout/FooterBar.vue`
-4. **图片下载清单**（远程 URL → 本地路径 表格）
-5. **页面说明**：生成的页面名称和对应的路由路径
+4. **App.vue 更新**（如果创建了 NavBar 或 FooterBar 组件）：
+   - 在 `<script setup>` 中引入组件
+   - 在 `<template>` 中添加 `<NavBar />` 和 `<FooterBar />` 组件
+5. **图片下载清单**（远程 URL → 本地路径 表格，使用重命名后的文件名）
+6. **页面说明**：生成的页面名称和对应的路由路径
 
 ### 多个文件处理说明
 
 当处理多个 HTML 文件时：
 - 每个文件都会生成独立的页面和输出清单
 - navbar 和 footer 组件只会在首次出现时创建，后续文件会复用这些组件
+- **App.vue 更新**：只在首次创建 NavBar 或 FooterBar 组件时更新 App.vue，后续文件处理时不再重复更新
 - 图片资源按页面分别组织到对应的 `@/assets/images/{页面名}/` 目录下
+- 所有图片都使用 `[页面名称或组件名]-[随机值].[扩展名]` 格式重命名，避免特殊字符问题
