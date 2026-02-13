@@ -22,8 +22,9 @@ description: >
 - **保留 Absolute 布局**：不要强行转换 Flex。确保父容器（最外层 div）具备 `relative` 类。
 
 ### 步骤 2 · 提取 Navbar 和 Footer
+- **前置检查**：若 `@/components/layout/` 下已存在 `NavBar.vue` 或 `FooterBar.vue`，则**不进行转换**——仅从当前要处理的代码中**删除**对应的导航/页脚 HTML 区块，不生成或覆盖已有组件，不修改 `App.vue`。
 - **识别**：根据位置（Top-0 或 Bottom-0）和内容（Logo, 版权信息）识别导航栏和页脚。
-- **剥离**：将它们提取为 `@/components/layout/NavBar.vue` 和 `FooterBar.vue`。
+- **剥离**（仅当 layout 中尚无对应组件时）：将它们提取为 `@/components/layout/NavBar.vue` 和 `FooterBar.vue`。
 - **全局管理**：在 `App.vue` 中引入并包裹 `<router-view>`，主页面代码中删除这部分 HTML。
 - **记录高度**：记录两者的 `h-xx`（如 `h-100` 和 `h-402`）。
 
