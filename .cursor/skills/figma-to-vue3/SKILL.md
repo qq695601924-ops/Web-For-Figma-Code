@@ -34,14 +34,14 @@ description: >
 
 ### 步骤 4 · 图片本地化与重命名
 - **扫描**：找出所有远程图片 URL。
-- **重命名规则**：`[页面名或组件名]-[8位随机字符].[原扩展名]`。
-  - 主页面：`home-a3f5b2c1.png`
-  - NavBar：`navbar-x9k2m4n7.png`
+- **重命名规则**：`[页面名或组件名]-[4位随机字符].[原扩展名]`。
+  - 主页面：`home-52c1.png`
+  - NavBar：`navbar-m4n7.png`
 - **保存路径**：主页面图存入 `@/assets/images/{页面名}/`，组件图存入 `@/assets/images/layout/`。
 - **路径替换**：代码中统一改为 `@/assets/images/...`。
 
 ## 3. 输出清单
-1. `src/pages/{页面名}/index.vue`（纯净的内容区块代码）。
+1. `src/pages/{页面名}/index.vue`（纯净的内容区块代码，页面名称PascalCase，英文，简洁）。
 2. `NavBar.vue` 和 `FooterBar.vue`（如果之前未生成）。
 3. `App.vue` 引入代码示例。
 4. **图片下载对照表**（远程 URL -> 本地路径）。

@@ -1,5 +1,10 @@
-User-agent: *
-Disallow:
+# SeguroCash - SEO robots
+# App uses hash routing: /#/inicio, /#/seguridad, /#/ayuda, /#/sobre-nosotros, /#/agreement
 
-Sitemap: https://www.optivolvedigital.com/#/
-Sitemap: https://optivolvedigital.com/#/
+User-agent: *
+Allow: /
+
+# Optional: disallow if you add server-side API under /api later
+# Disallow: /api/
+
+Sitemap: https://segurocash.com/sitemap.xml

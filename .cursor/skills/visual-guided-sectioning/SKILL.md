@@ -35,5 +35,22 @@ description: >
 * **处理条件**：当父容器的所有直接子元素都已转换为带有 `relative` 定位和 `min-h` 的 Section 时，父容器本身的 `min-h` 可以移除（因为子 Section 会自动撑起父容器高度）。
 
 ## 6. 输出要求
-* **代码结构**：输出完整的 `index.vue`。
-* **修正记录**：在输出末尾简要说明为了对齐原图，你手动微调了哪些明显的像素偏差。
+
+### 代码结构
+采用 **主页面 + Section组件** 的拆分模式：
+
+**文件结构示例：**
+```
+/views/[page]/
+├── index.vue                    # 主页面（负责布局和组件编排）
+└── components/
+    ├── HeroSection.vue          # 各section组件
+    ├── FeatureSection.vue
+    └── ...
+```
+
+**拆分规则：**
+1. 每个视觉/功能 section 独立为一个 `.vue` 文件
+2. 组件放置于 `./components/` 目录下
+3. 文件命名：`[SectionName]Section.vue`（PascalCase，简洁）
+4. 主页面 `index.vue` 仅负责引入和排列各 section 组件
