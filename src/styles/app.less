@@ -1,23 +1,9 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Light.ttf') format('truetype');
-  font-weight: 100;
-}
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Regular.ttf') format('truetype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-Bold.ttf') format('truetype');
-  font-weight: 700;
-}
-
 html,
 body {
   background: white;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body,
 button,
@@ -25,7 +11,6 @@ input,
 select,
 textarea {
   text-transform: none;
-  font-family: 'Inter', sans-serif;
   font-weight: normal;
   letter-spacing: 0%;
 }
@@ -96,7 +81,7 @@ ol {
 }
 
 .gradient-text {
-  background: linear-gradient(to bottom, #126ad8, #2444c2);
+  background: linear-gradient(to bottom, var(--primary-color), var(--primary-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
