@@ -20,6 +20,7 @@ description: 将 Vue SFC 模板中基于 absolute 定位的布局转换为 flex 
 ```
 
 从 Tailwind 类中解析数值，常见格式：
+
 - `top-489` → top: 489
 - `left-[188px]` → left: 188
 - `w-851` → width: 851
@@ -51,6 +52,7 @@ A 包含 B 的条件：
 
 **混合排列** — `top` 和 `left` 都不对齐，且不重叠：
 → 两步处理：
+
   1. 按 `top` 排序，将 top 差值 < 50px 的归为一"行"
   2. 每行内按 `left` 排序
   3. 外层 `flex flex-col` 包裹各行，每行内部 `flex flex-row`
@@ -79,6 +81,18 @@ A 包含 B 的条件：
 | 多个 gap 差值 < 8px | 取平均值 | 统一 `gap` |
 | gap 差值较大 | 保留各自值 | 每个子元素的 `margin` |
 
+**水平居中检测：**
+
+计算内容区域的左右留白：
+
+- `leftSpace = child.left - parent.left`
+- `rightSpace = parent.width - child.right`
+
+| 条件 | 策略 |
+|---|---|
+| `abs(leftSpace - rightSpace) < 30px` | 用 `mx-auto` + `max-w-[内容宽]`，实现居中自适应 |
+| `abs(leftSpace - rightSpace) >= 30px` | 保持 `pl-*`，忠实还原原始偏移 |
+
 ### 第六步：确定尺寸策略
 
 | 条件 | 策略 |
@@ -92,6 +106,7 @@ A 包含 B 的条件：
 ### 第七步：清理类名
 
 **删除：**
+
 - `absolute`、根容器不再需要的 `relative`
 - `top-*`、`left-*`、`right-*`、`bottom-*`
 - 根容器的 `min-h-[X]`（由内容撑开高度）
@@ -99,6 +114,7 @@ A 包含 B 的条件：
 - 文本容器的固定 `w-[X]` / `h-[X]`（除非是有意的 max-width）
 
 **保留：**
+
 - 颜色、字体、字号、背景等视觉类
 - 内部元素原有的 `flex`、`gap`、`justify-*`、`items-*`
 - 组件 props 和指令（`v-for`、`:key` 等）
@@ -106,6 +122,7 @@ A 包含 B 的条件：
 ### 第八步：组装并验证
 
 转换完成后，逐项检查：
+
 1. 除了装饰层（包裹在 `relative` 内），没有元素使用 `absolute`
 2. 根容器没有 `min-h-[X]` — 高度由内容决定
 3. 视觉阅读顺序与 DOM 顺序一致（上→下、左→右）
@@ -121,6 +138,7 @@ A 包含 B 的条件：
 ## 示例
 
 **转换前：**
+
 ```html
 <div class="min-h-800 bg-white relative">
   <h1 class="absolute left-100 top-60 text-48 font-bold">标题</h1>
@@ -131,11 +149,13 @@ A 包含 B 的条件：
 ```
 
 **分析过程：**
+
 - h1(left:100, top:60) 和 p(left:100, top:130) → left 相同，垂直排列 → 标题组
 - img(left:50, top:250) 和 div(left:400, top:250) → top 相同，水平排列 → 内容行
 - 标题组 top:60–146，内容行 top:250 → 两个垂直区块
 
 **转换后：**
+
 ```html
 <!-- 根容器：垂直堆叠，保留背景，去掉 min-h -->
 <div class="bg-white flex flex-col px-50 pt-60 gap-104">
